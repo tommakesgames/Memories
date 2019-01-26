@@ -106,7 +106,8 @@
 			"clearCircle",
 			"Function",
 			"Audio",
-			"memoryClear"
+			"memoryClear",
+			"energyBar"
 		],
 		"subfolders": []
 	},

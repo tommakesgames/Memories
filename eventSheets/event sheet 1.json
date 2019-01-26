@@ -42,6 +42,36 @@
 			"sid": 118423457335738
 		},
 		{
+			"eventType": "variable",
+			"name": "initialEnergyBarHeight",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 128007228053825
+		},
+		{
+			"eventType": "variable",
+			"name": "energy",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 188143353194206
+		},
+		{
+			"eventType": "variable",
+			"name": "energyRate",
+			"type": "number",
+			"initialValue": "0.5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 315546352112931
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -61,6 +91,28 @@
 				}
 			],
 			"sid": 144365467535202
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 502166315277921
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 950460006796465,
+					"parameters": {
+						"variable": "initialEnergyBarHeight",
+						"value": "energyBar.Height"
+					}
+				}
+			],
+			"sid": 891339305556636
 		},
 		{
 			"eventType": "group",
@@ -356,21 +408,19 @@
 							"parameters": {
 								"tag": "\"startCircle\""
 							}
-						}
-					],
-					"actions": [
+						},
 						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 934304819941240,
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 602792650934313,
 							"parameters": {
-								"audio-file": "Hit_Hurt3",
-								"loop": "not-looping",
-								"volume": "0",
-								"tag-optional": "\"\""
+								"variable": "energy",
+								"comparison": 4,
+								"value": "0"
 							}
 						}
 					],
+					"actions": [],
 					"sid": 803200014332881,
 					"children": [
 						{
@@ -403,7 +453,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Whilst player is stood still and circle growth has kicked in, grow the circle"
+					"text": "Whilst player is stood still and circle growth has kicked in, and you still have energy, grow the circle"
 				},
 				{
 					"eventType": "block",
@@ -415,6 +465,16 @@
 							"parameters": {
 								"variable": "clearCircleReset"
 							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 940583046149840,
+							"parameters": {
+								"variable": "energy",
+								"comparison": 4,
+								"value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -425,6 +485,23 @@
 							"parameters": {
 								"width": "clearCircle.Width+circleGrowRate",
 								"height": "clearCircle.Height+circleGrowRate"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 222120806964654,
+							"parameters": {
+								"variable": "energy",
+								"value": "energyRate"
+							}
+						},
+						{
+							"id": "set-height",
+							"objectClass": "energyBar",
+							"sid": 505156522812261,
+							"parameters": {
+								"height": "(initialEnergyBarHeight/100)*energy"
 							}
 						}
 					],
