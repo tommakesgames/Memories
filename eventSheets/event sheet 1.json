@@ -15,7 +15,7 @@
 			"eventType": "variable",
 			"name": "circleGrowRate",
 			"type": "number",
-			"initialValue": "3",
+			"initialValue": "5",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -65,32 +65,166 @@
 			"eventType": "variable",
 			"name": "energyRate",
 			"type": "number",
-			"initialValue": "0.5",
+			"initialValue": "0.2",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 315546352112931
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "variable",
+			"name": "scaleChange",
+			"type": "number",
+			"initialValue": "0.005",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 856421541490253
+		},
+		{
+			"eventType": "variable",
+			"name": "memoryClearOpacityRate",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 961814479776837
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Debug",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 169458050807251,
-					"parameters": {
-						"key": 27
-					}
+					"eventType": "comment",
+					"text": "Quick exit from preview"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 666987436843379,
+							"parameters": {
+								"key": 27
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "close",
+							"objectClass": "Browser",
+							"sid": 788362487256930
+						}
+					],
+					"sid": 669667710908447
+				},
+				{
+					"eventType": "comment",
+					"text": "Change layout Scale"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 264795678623298,
+							"parameters": {
+								"key": 189
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layout-scale",
+							"objectClass": "System",
+							"sid": 260742518051941,
+							"parameters": {
+								"scale": "LayoutScale-scaleChange"
+							}
+						}
+					],
+					"sid": 728915769629871
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 120591583247743,
+							"parameters": {
+								"key": 187
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layout-scale",
+							"objectClass": "System",
+							"sid": 584385888554165,
+							"parameters": {
+								"scale": "LayoutScale+scaleChange"
+							}
+						}
+					],
+					"sid": 172694512183862
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 178027003644646,
+							"parameters": {
+								"key": 48
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layout-scale",
+							"objectClass": "System",
+							"sid": 154051458431978,
+							"parameters": {
+								"scale": "1.0"
+							}
+						}
+					],
+					"sid": 775563661302466
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 146425856174823,
+							"parameters": {
+								"key": 57
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layout-scale",
+							"objectClass": "System",
+							"sid": 501238552054535,
+							"parameters": {
+								"scale": "0.25"
+							}
+						}
+					],
+					"sid": 248681850408742
 				}
 			],
-			"actions": [
-				{
-					"id": "close",
-					"objectClass": "Browser",
-					"sid": 691572161095895
-				}
-			],
-			"sid": 144365467535202
+			"sid": 640762880251818
 		},
 		{
 			"eventType": "block",
@@ -110,9 +244,41 @@
 						"variable": "initialEnergyBarHeight",
 						"value": "energyBar.Height"
 					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "memoryClear",
+					"sid": 894292366299457
 				}
 			],
-			"sid": 891339305556636
+			"sid": 891339305556636,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-random-instance",
+							"objectClass": "System",
+							"sid": 491275419310907,
+							"parameters": {
+								"object": "startPoint"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "player",
+							"sid": 447068366968765,
+							"parameters": {
+								"object": "startPoint",
+								"image-point-optional": "1"
+							}
+						}
+					],
+					"sid": 599310969281352
+				}
+			]
 		},
 		{
 			"eventType": "group",
@@ -152,14 +318,6 @@
 							}
 						},
 						{
-							"id": "set-scale",
-							"objectClass": "clearCircle",
-							"sid": 925094260246103,
-							"parameters": {
-								"scale": "1"
-							}
-						},
-						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 508734136236596,
@@ -174,6 +332,15 @@
 							"sid": 489168581311396,
 							"parameters": {
 								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "clearCircle",
+							"sid": 322051725198258,
+							"parameters": {
+								"width": "player.Width",
+								"height": "player.Height"
 							}
 						}
 					],
@@ -210,10 +377,10 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "clearCircle",
-							"sid": 227844174855783,
+							"sid": 536509134072796,
 							"parameters": {
 								"object": "memoryClear",
-								"layer": "0",
+								"layer": "\"fog\"",
 								"image-point": "0"
 							}
 						},
@@ -266,6 +433,31 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-opacity",
+							"objectClass": "memoryClear",
+							"sid": 650473633731166,
+							"parameters": {
+								"comparison": 2,
+								"opacity": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "memoryClear",
+							"sid": 260206259137911,
+							"parameters": {
+								"opacity": "memoryClear.Opacity+memoryClearOpacityRate"
+							}
+						}
+					],
+					"sid": 306404434566273
+				},
 				{
 					"eventType": "block",
 					"conditions": [

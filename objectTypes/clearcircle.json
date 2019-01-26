@@ -9,6 +9,11 @@
 			"behaviorId": "Fade",
 			"name": "Fade",
 			"sid": 205974009864259
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 689760548501239
 		}
 	],
 	"effectTypes": [],
@@ -17,25 +22,34 @@
 			{
 				"frames": [
 					{
-						"width": 48,
-						"height": 48,
-						"originX": 0.5278969957081545,
-						"originY": 0.5021459227467812,
-						"originalSource": "",
+						"width": 200,
+						"height": 200,
+						"originX": 0.5357563245866608,
+						"originY": 0.47483747125187886,
+						"originalSource": "C:\\Users\\Tom\\Downloads\\Default.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7,
-						"duration": 1
-					},
-					{
-						"width": 48,
-						"height": 48,
-						"originX": 0.5278969957081545,
-						"originY": 0.5021459227467812,
-						"originalSource": "",
-						"exportFormat": "png",
-						"exportQuality": 0.8,
-						"imageSpriteId": 10,
+						"imageSpriteId": 14,
+						"collisionPoly": {
+							"points": [
+								0.275,
+								0.275,
+								0.5,
+								0.18,
+								0.715,
+								0.28,
+								0.8,
+								0.5,
+								0.705,
+								0.705,
+								0.5,
+								0.795,
+								0.2849999999999999,
+								0.71,
+								0.18500000000000005,
+								0.5
+							]
+						},
 						"duration": 1
 					}
 				],
