@@ -1,44 +1,28 @@
 {
-	"name": "player",
+	"name": "memoryClear",
 	"plugin-id": "Sprite",
-	"sid": 130645356445964,
+	"sid": 521327125921201,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "EightDir",
-			"name": "8Direction",
-			"sid": 535778786716947
-		},
-		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 305299729238191
-		},
-		{
-			"behaviorId": "Timer",
-			"name": "Timer",
-			"sid": 908490415186199
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 128,
-						"height": 128,
+						"width": 135,
+						"height": 135,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3,
+						"imageSpriteId": 2,
 						"duration": 1
 					}
 				],
-				"sid": 372501370973843,
+				"sid": 969811592576166,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

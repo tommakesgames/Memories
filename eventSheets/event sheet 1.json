@@ -2,6 +2,46 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "playerStartedMoving",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 728268904738969
+		},
+		{
+			"eventType": "variable",
+			"name": "circleGrowRate",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 465627950951279
+		},
+		{
+			"eventType": "variable",
+			"name": "circleDelay",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 679782526255859
+		},
+		{
+			"eventType": "variable",
+			"name": "clearCircleReset",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 118423457335738
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -21,6 +61,377 @@
 				}
 			],
 			"sid": 144365467535202
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Functions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-function",
+							"objectClass": "Function",
+							"sid": 436190149351012,
+							"parameters": {
+								"name": "\"startClearCircle\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "clearCircle",
+							"sid": 387243617421627,
+							"parameters": {
+								"object": "player",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "clearCircle",
+							"sid": 750900584883389,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "clearCircle",
+							"sid": 925094260246103,
+							"parameters": {
+								"scale": "1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 508734136236596,
+							"parameters": {
+								"variable": "clearCircleReset",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "clearCircle",
+							"sid": 489168581311396,
+							"parameters": {
+								"opacity": "100"
+							}
+						}
+					],
+					"sid": 143236583477731
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-function",
+							"objectClass": "Function",
+							"sid": 699658933342303,
+							"parameters": {
+								"name": "\"endClearCircle\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-fade",
+							"objectClass": "clearCircle",
+							"sid": 212856701699841,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 360932673209767,
+							"parameters": {
+								"variable": "clearCircleReset",
+								"value": "false"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "clearCircle",
+							"sid": 227844174855783,
+							"parameters": {
+								"object": "memoryClear",
+								"layer": "0",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "memoryClear",
+							"sid": 942199340921481,
+							"parameters": {
+								"width": "clearCircle.Width",
+								"height": "clearCircle.Height"
+							}
+						}
+					],
+					"sid": 559732367513763
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-fade-out-finished",
+							"objectClass": "clearCircle",
+							"sid": 592195641848507,
+							"behaviorType": "Fade"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "clearCircle",
+							"sid": 311806662534990,
+							"parameters": {
+								"x": "-100",
+								"y": "-100"
+							}
+						}
+					],
+					"sid": 261645435834358
+				}
+			],
+			"sid": 379227187891659
+		},
+		{
+			"eventType": "comment",
+			"text": "Memory clear doesn't start at beginning."
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MemoryCircle",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "player",
+							"sid": 246228438635513,
+							"behaviorType": "8Direction"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 570894572584023,
+							"parameters": {
+								"variable": "playerStartedMoving",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 602178009143478,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "If circle is growing, stop it growing"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 950284456818074,
+									"parameters": {
+										"variable": "clearCircleReset"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 985984947854017,
+									"parameters": {
+										"name": "\"endClearCircle\"",
+										"parameter-n": []
+									}
+								}
+							],
+							"sid": 376902531630672
+						},
+						{
+							"eventType": "comment",
+							"text": "If waiting for growth timer to kick in, stop the timer"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-timer-running",
+									"objectClass": "player",
+									"sid": 405948784797415,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"startCircle\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-timer",
+									"objectClass": "player",
+									"sid": 119413474503830,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"startCircle\""
+									}
+								}
+							],
+							"sid": 358290325222306
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Start timer to kick of circle growth"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "player",
+							"sid": 713660368941640,
+							"behaviorType": "8Direction",
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 168922482521640,
+							"parameters": {
+								"variable": "playerStartedMoving"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 192303357114101
+						}
+					],
+					"actions": [
+						{
+							"id": "start-timer",
+							"objectClass": "player",
+							"sid": 294319916338801,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "circleDelay",
+								"type": "once",
+								"tag": "\"startCircle\""
+							}
+						}
+					],
+					"sid": 686224818391446
+				},
+				{
+					"eventType": "comment",
+					"text": "If player has stood still for a time, then begin circle growth"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "player",
+							"sid": 702857236612452,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"startCircle\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 934304819941240,
+							"parameters": {
+								"audio-file": "Hit_Hurt3",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 803200014332881,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 881281083947956,
+									"parameters": {
+										"variable": "clearCircleReset"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 282886031229013,
+									"parameters": {
+										"name": "\"startClearCircle\"",
+										"parameter-n": []
+									}
+								}
+							],
+							"sid": 251383413949265
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Whilst player is stood still and circle growth has kicked in, grow the circle"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 837812311817509,
+							"parameters": {
+								"variable": "clearCircleReset"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "clearCircle",
+							"sid": 752749466342831,
+							"parameters": {
+								"width": "clearCircle.Width+circleGrowRate",
+								"height": "clearCircle.Height+circleGrowRate"
+							}
+						}
+					],
+					"sid": 592546644985928
+				}
+			],
+			"sid": 521654272012787
 		}
 	],
 	"sid": 164693033357527
