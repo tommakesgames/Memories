@@ -88,6 +88,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
+			"author": "Scirra",
+			"version": "r135.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Fade",
 			"name": "Fade",
 			"author": "Scirra",
@@ -116,7 +124,8 @@
 			"Audio",
 			"memoryClear",
 			"energyBar",
-			"startPoint"
+			"startPoint",
+			"wall"
 		],
 		"subfolders": []
 	},
@@ -195,7 +204,78 @@
 		},
 		"general": {
 			"items": [],
-			"subfolders": []
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "1.png",
+							"type": "image/png"
+						},
+						{
+							"name": "10.png",
+							"type": "image/png"
+						},
+						{
+							"name": "11.png",
+							"type": "image/png"
+						},
+						{
+							"name": "12.png",
+							"type": "image/png"
+						},
+						{
+							"name": "13.png",
+							"type": "image/png"
+						},
+						{
+							"name": "14.png",
+							"type": "image/png"
+						},
+						{
+							"name": "15.png",
+							"type": "image/png"
+						},
+						{
+							"name": "16.png",
+							"type": "image/png"
+						},
+						{
+							"name": "2.png",
+							"type": "image/png"
+						},
+						{
+							"name": "3.png",
+							"type": "image/png"
+						},
+						{
+							"name": "4.png",
+							"type": "image/png"
+						},
+						{
+							"name": "5.png",
+							"type": "image/png"
+						},
+						{
+							"name": "6.png",
+							"type": "image/png"
+						},
+						{
+							"name": "7.png",
+							"type": "image/png"
+						},
+						{
+							"name": "8.png",
+							"type": "image/png"
+						},
+						{
+							"name": "9.png",
+							"type": "image/png"
+						}
+					],
+					"subfolders": [],
+					"name": "Houses"
+				}
+			]
 		}
 	},
 	"timelines": {

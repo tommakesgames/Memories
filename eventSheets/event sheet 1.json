@@ -15,7 +15,7 @@
 			"eventType": "variable",
 			"name": "circleGrowRate",
 			"type": "number",
-			"initialValue": "5",
+			"initialValue": "10",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -249,6 +249,14 @@
 					"id": "destroy",
 					"objectClass": "memoryClear",
 					"sid": 894292366299457
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "buildings",
+					"sid": 871707332578500,
+					"parameters": {
+						"frame-number": "random(15)"
+					}
 				}
 			],
 			"sid": 891339305556636,
@@ -410,10 +418,10 @@
 						{
 							"id": "set-position",
 							"objectClass": "clearCircle",
-							"sid": 311806662534990,
+							"sid": 185952109234965,
 							"parameters": {
-								"x": "-100",
-								"y": "-100"
+								"x": "-1000",
+								"y": "-1000"
 							}
 						}
 					],

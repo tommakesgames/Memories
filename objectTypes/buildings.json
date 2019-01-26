@@ -17,24 +17,189 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 400,
+						"height": 400,
 						"originX": 0,
 						"originY": 0,
-						"originalSource": "",
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\1.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1,
+						"imageSpriteId": 53,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 52,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\3.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 57,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\4.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 55,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\5.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 56,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\6.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 54,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\7.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 58,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\8.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 59,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\9.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 62,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\10.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 61,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\11.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 60,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\12.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 63,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\13.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 64,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\14.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 65,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\15.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 66,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\16.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 67,
 						"duration": 1
 					}
 				],
 				"sid": 129379906594048,
-				"name": "Animation 1",
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 0
 			}
 		],
 		"subfolders": []
