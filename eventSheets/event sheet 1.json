@@ -1,5 +1,27 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 169458050807251,
+					"parameters": {
+						"key": 27
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "close",
+					"objectClass": "Browser",
+					"sid": 691572161095895
+				}
+			],
+			"sid": 144365467535202
+		}
+	],
 	"sid": 164693033357527
 }
