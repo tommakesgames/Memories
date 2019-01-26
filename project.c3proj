@@ -93,6 +93,14 @@
 			"author": "Scirra",
 			"version": "r135.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r135.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "6g1qnl6cj7h",
@@ -107,7 +115,8 @@
 			"Function",
 			"Audio",
 			"memoryClear",
-			"energyBar"
+			"energyBar",
+			"startPoint"
 		],
 		"subfolders": []
 	},

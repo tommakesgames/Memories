@@ -11,14 +11,34 @@
 			{
 				"frames": [
 					{
-						"width": 135,
-						"height": 135,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
+						"width": 182,
+						"height": 182,
+						"originX": 0.5054945054945055,
+						"originY": 0.510989010989011,
+						"originalSource": "C:\\Users\\Tom\\Downloads\\Default.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2,
+						"imageSpriteId": 13,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5054945054945055,
+								0,
+								1,
+								0,
+								1,
+								0.510989010989011,
+								1,
+								1,
+								0.5054945054945055,
+								1,
+								0,
+								1,
+								0,
+								0.510989010989011
+							]
+						},
 						"duration": 1
 					}
 				],
