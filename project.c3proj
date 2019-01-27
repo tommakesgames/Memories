@@ -71,6 +71,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"version": "r135.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -184,20 +192,35 @@
 			"zoomOutFocus",
 			"bomb",
 			"detonation",
-			"zoomOutFinal"
+			"zoomOutFinal",
+			"fadeToBlack",
+			"SpriteFont",
+			"buildingsMiddle",
+			"peopleSpawn",
+			"people",
+			"light"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
-	"containers": [],
+	"containers": [
+		{
+			"members": [
+				"buildings",
+				"buildingsMiddle"
+			],
+			"selectMode": "normal"
+		}
+	],
 	"families": {
-		"items": [],
+		"items": [
+			"structures"
+		],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
-			"Past",
-			"Present"
+			"Past"
 		],
 		"subfolders": []
 	},

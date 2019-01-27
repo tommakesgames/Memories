@@ -1,0 +1,21 @@
+{
+	"name": "structures",
+	"plugin-id": "Sprite",
+	"sid": 118181871834739,
+	"instanceVariables": [
+		{
+			"name": "frame",
+			"type": "number",
+			"desc": "",
+			"sid": 227151631285662
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"buildings",
+		"cornerRoad",
+		"junctions",
+		"roads"
+	]
+}

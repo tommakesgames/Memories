@@ -1,0 +1,191 @@
+{
+	"name": "people",
+	"plugin-id": "Sprite",
+	"sid": 597808350131513,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 307766072112907
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 402,
+						"height": 269,
+						"originX": 0.5,
+						"originY": 0.5613382899628253,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\people\\people_1_1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 128,
+						"collisionPoly": {
+							"points": [
+								0.9975124378109452,
+								0,
+								0.9975124378109452,
+								1,
+								0.0024875621890547263,
+								1,
+								0.0024875621890547263,
+								0
+							]
+						},
+						"duration": 1
+					},
+					{
+						"width": 360,
+						"height": 269,
+						"originX": 0.5583333333333333,
+						"originY": 0.5613382899628253,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\people\\people_1_2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 130,
+						"collisionPoly": {
+							"points": [
+								1,
+								0,
+								1,
+								1,
+								0.002777777777777778,
+								1,
+								0.002777777777777778,
+								0
+							]
+						},
+						"duration": 1
+					}
+				],
+				"sid": 855639185746364,
+				"name": "1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 3
+			},
+			{
+				"frames": [
+					{
+						"width": 337,
+						"height": 236,
+						"originX": 0.4332344213649852,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\people\\people_2_1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 127,
+						"collisionPoly": {
+							"points": [
+								1,
+								0,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0
+							]
+						},
+						"duration": 1
+					},
+					{
+						"width": 333,
+						"height": 236,
+						"originX": 0.44144144144144143,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\people\\people_2_2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 129,
+						"collisionPoly": {
+							"points": [
+								1,
+								0,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0
+							]
+						},
+						"duration": 1
+					}
+				],
+				"sid": 683197234565083,
+				"name": "2",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 3
+			},
+			{
+				"frames": [
+					{
+						"width": 402,
+						"height": 301,
+						"originX": 0.5,
+						"originY": 0.5016611295681063,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\people\\people3_1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 132,
+						"collisionPoly": {
+							"points": [
+								0.9975124378109452,
+								0,
+								0.9975124378109452,
+								1,
+								0.0024875621890547263,
+								1,
+								0.0024875621890547263,
+								0
+							]
+						},
+						"duration": 1
+					},
+					{
+						"width": 402,
+						"height": 301,
+						"originX": 0.5,
+						"originY": 0.5016611295681063,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\people\\people3_2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 131,
+						"collisionPoly": {
+							"points": [
+								0.9975124378109452,
+								0,
+								0.9975124378109452,
+								1,
+								0.0024875621890547263,
+								1,
+								0.0024875621890547263,
+								0
+							]
+						},
+						"duration": 1
+					}
+				],
+				"sid": 252238357740998,
+				"name": "3",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 3
+			}
+		],
+		"subfolders": []
+	}
+}

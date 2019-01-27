@@ -2,34 +2,6 @@
 	"name": "Past",
 	"layers": [
 		{
-			"name": "fog",
-			"overriden": 0,
-			"instances": [],
-			"sid": 742670788244566,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"color": [
-				1,
-				1,
-				1,
-				0.8
-			],
-			"backgroundColor": [
-				0,
-				0,
-				0,
-				1
-			],
-			"isTransparent": false,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"global": false
-		},
-		{
 			"name": "city",
 			"overriden": 0,
 			"instances": [
@@ -44,6 +16,7 @@
 					},
 					"uid": 1,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -97,6 +70,7 @@
 					},
 					"uid": 2,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -150,6 +124,7 @@
 					},
 					"uid": 3,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -203,6 +178,7 @@
 					},
 					"uid": 4,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -256,6 +232,7 @@
 					},
 					"uid": 5,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -309,6 +286,7 @@
 					},
 					"uid": 6,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -362,6 +340,7 @@
 					},
 					"uid": 7,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -415,6 +394,7 @@
 					},
 					"uid": 8,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -468,6 +448,7 @@
 					},
 					"uid": 9,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -521,6 +502,7 @@
 					},
 					"uid": 10,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -574,6 +556,7 @@
 					},
 					"uid": 11,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -627,6 +610,7 @@
 					},
 					"uid": 12,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -680,6 +664,7 @@
 					},
 					"uid": 13,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -733,6 +718,7 @@
 					},
 					"uid": 14,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -786,6 +772,7 @@
 					},
 					"uid": 15,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -839,6 +826,7 @@
 					},
 					"uid": 16,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -892,6 +880,7 @@
 					},
 					"uid": 17,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -945,6 +934,7 @@
 					},
 					"uid": 18,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -998,6 +988,7 @@
 					},
 					"uid": 19,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -1051,6 +1042,7 @@
 					},
 					"uid": 20,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -1104,6 +1096,7 @@
 					},
 					"uid": 21,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -1157,6 +1150,7 @@
 					},
 					"uid": 22,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -1210,6 +1204,7 @@
 					},
 					"uid": 23,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -1263,6 +1258,7 @@
 					},
 					"uid": 24,
 					"instanceVariables": {
+						"frame": 0,
 						"special": false,
 						"discovered": false
 					},
@@ -1315,7 +1311,9 @@
 						"live-preview": false
 					},
 					"uid": 32,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1356,7 +1354,9 @@
 						"live-preview": false
 					},
 					"uid": 33,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1397,7 +1397,9 @@
 						"live-preview": false
 					},
 					"uid": 34,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1438,7 +1440,9 @@
 						"live-preview": false
 					},
 					"uid": 59,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1479,7 +1483,9 @@
 						"live-preview": false
 					},
 					"uid": 60,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1520,7 +1526,9 @@
 						"live-preview": false
 					},
 					"uid": 61,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1561,7 +1569,9 @@
 						"live-preview": false
 					},
 					"uid": 62,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1602,7 +1612,9 @@
 						"live-preview": false
 					},
 					"uid": 63,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1643,7 +1655,9 @@
 						"live-preview": false
 					},
 					"uid": 64,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1684,7 +1698,9 @@
 						"live-preview": false
 					},
 					"uid": 65,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1725,7 +1741,9 @@
 						"live-preview": false
 					},
 					"uid": 66,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1766,7 +1784,9 @@
 						"live-preview": false
 					},
 					"uid": 67,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1807,7 +1827,9 @@
 						"live-preview": false
 					},
 					"uid": 68,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1848,7 +1870,9 @@
 						"live-preview": false
 					},
 					"uid": 69,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1889,7 +1913,9 @@
 						"live-preview": false
 					},
 					"uid": 70,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1930,7 +1956,9 @@
 						"live-preview": false
 					},
 					"uid": 71,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -1971,7 +1999,9 @@
 						"live-preview": false
 					},
 					"uid": 72,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2012,7 +2042,9 @@
 						"live-preview": false
 					},
 					"uid": 73,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2053,7 +2085,9 @@
 						"live-preview": false
 					},
 					"uid": 74,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2094,7 +2128,9 @@
 						"live-preview": false
 					},
 					"uid": 75,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2135,7 +2171,9 @@
 						"live-preview": false
 					},
 					"uid": 77,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2176,7 +2214,9 @@
 						"live-preview": false
 					},
 					"uid": 78,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2217,7 +2257,9 @@
 						"live-preview": false
 					},
 					"uid": 79,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2258,7 +2300,9 @@
 						"live-preview": false
 					},
 					"uid": 76,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2299,7 +2343,9 @@
 						"live-preview": false
 					},
 					"uid": 80,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2340,7 +2386,9 @@
 						"live-preview": false
 					},
 					"uid": 81,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2381,7 +2429,9 @@
 						"live-preview": false
 					},
 					"uid": 82,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2422,7 +2472,9 @@
 						"live-preview": false
 					},
 					"uid": 83,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2463,7 +2515,9 @@
 						"live-preview": false
 					},
 					"uid": 84,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2504,7 +2558,9 @@
 						"live-preview": false
 					},
 					"uid": 85,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2545,7 +2601,9 @@
 						"live-preview": false
 					},
 					"uid": 86,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2586,7 +2644,9 @@
 						"live-preview": false
 					},
 					"uid": 87,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2627,7 +2687,9 @@
 						"live-preview": false
 					},
 					"uid": 88,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2668,7 +2730,9 @@
 						"live-preview": false
 					},
 					"uid": 89,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2709,7 +2773,9 @@
 						"live-preview": false
 					},
 					"uid": 90,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2750,7 +2816,9 @@
 						"live-preview": false
 					},
 					"uid": 91,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2791,7 +2859,9 @@
 						"live-preview": false
 					},
 					"uid": 92,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2832,7 +2902,9 @@
 						"live-preview": false
 					},
 					"uid": 93,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2873,7 +2945,9 @@
 						"live-preview": false
 					},
 					"uid": 94,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2914,7 +2988,9 @@
 						"live-preview": false
 					},
 					"uid": 95,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2955,7 +3031,9 @@
 						"live-preview": false
 					},
 					"uid": 96,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -2996,7 +3074,9 @@
 						"live-preview": false
 					},
 					"uid": 97,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3037,7 +3117,9 @@
 						"live-preview": false
 					},
 					"uid": 98,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3078,7 +3160,9 @@
 						"live-preview": false
 					},
 					"uid": 99,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3119,7 +3203,9 @@
 						"live-preview": false
 					},
 					"uid": 100,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3160,7 +3246,9 @@
 						"live-preview": false
 					},
 					"uid": 101,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3201,7 +3289,9 @@
 						"live-preview": false
 					},
 					"uid": 102,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3242,7 +3332,9 @@
 						"live-preview": false
 					},
 					"uid": 103,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3283,7 +3375,9 @@
 						"live-preview": false
 					},
 					"uid": 104,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3324,7 +3418,9 @@
 						"live-preview": false
 					},
 					"uid": 105,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3365,7 +3461,9 @@
 						"live-preview": false
 					},
 					"uid": 106,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3406,7 +3504,9 @@
 						"live-preview": false
 					},
 					"uid": 107,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3447,7 +3547,9 @@
 						"live-preview": false
 					},
 					"uid": 108,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3488,7 +3590,9 @@
 						"live-preview": false
 					},
 					"uid": 109,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3529,7 +3633,9 @@
 						"live-preview": false
 					},
 					"uid": 110,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3570,7 +3676,9 @@
 						"live-preview": false
 					},
 					"uid": 111,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3611,7 +3719,9 @@
 						"live-preview": false
 					},
 					"uid": 112,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3652,7 +3762,9 @@
 						"live-preview": false
 					},
 					"uid": 113,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3693,7 +3805,9 @@
 						"live-preview": false
 					},
 					"uid": 145,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3734,7 +3848,9 @@
 						"live-preview": false
 					},
 					"uid": 146,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3775,7 +3891,9 @@
 						"live-preview": false
 					},
 					"uid": 147,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3816,7 +3934,9 @@
 						"live-preview": false
 					},
 					"uid": 148,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3857,7 +3977,9 @@
 						"live-preview": false
 					},
 					"uid": 114,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3898,7 +4020,9 @@
 						"live-preview": false
 					},
 					"uid": 115,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3939,7 +4063,9 @@
 						"live-preview": false
 					},
 					"uid": 116,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -3980,7 +4106,9 @@
 						"live-preview": false
 					},
 					"uid": 117,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4021,7 +4149,9 @@
 						"live-preview": false
 					},
 					"uid": 118,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4062,7 +4192,9 @@
 						"live-preview": false
 					},
 					"uid": 119,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4103,7 +4235,9 @@
 						"live-preview": false
 					},
 					"uid": 120,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4144,7 +4278,9 @@
 						"live-preview": false
 					},
 					"uid": 121,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4185,7 +4321,9 @@
 						"live-preview": false
 					},
 					"uid": 122,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4226,7 +4364,9 @@
 						"live-preview": false
 					},
 					"uid": 123,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4267,7 +4407,9 @@
 						"live-preview": false
 					},
 					"uid": 124,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4308,7 +4450,9 @@
 						"live-preview": false
 					},
 					"uid": 125,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4349,7 +4493,9 @@
 						"live-preview": false
 					},
 					"uid": 126,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4390,7 +4536,9 @@
 						"live-preview": false
 					},
 					"uid": 127,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4431,7 +4579,9 @@
 						"live-preview": false
 					},
 					"uid": 128,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4472,7 +4622,9 @@
 						"live-preview": false
 					},
 					"uid": 129,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4513,7 +4665,9 @@
 						"live-preview": false
 					},
 					"uid": 130,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4554,7 +4708,9 @@
 						"live-preview": false
 					},
 					"uid": 131,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4595,7 +4751,9 @@
 						"live-preview": false
 					},
 					"uid": 132,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4636,7 +4794,9 @@
 						"live-preview": false
 					},
 					"uid": 133,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4677,7 +4837,9 @@
 						"live-preview": false
 					},
 					"uid": 134,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4718,7 +4880,9 @@
 						"live-preview": false
 					},
 					"uid": 135,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4759,7 +4923,9 @@
 						"live-preview": false
 					},
 					"uid": 136,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4800,7 +4966,9 @@
 						"live-preview": false
 					},
 					"uid": 137,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4841,7 +5009,9 @@
 						"live-preview": false
 					},
 					"uid": 138,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4882,7 +5052,9 @@
 						"live-preview": false
 					},
 					"uid": 139,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4923,7 +5095,9 @@
 						"live-preview": false
 					},
 					"uid": 140,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -4964,7 +5138,9 @@
 						"live-preview": false
 					},
 					"uid": 141,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -5005,7 +5181,9 @@
 						"live-preview": false
 					},
 					"uid": 142,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -5046,7 +5224,9 @@
 						"live-preview": false
 					},
 					"uid": 143,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -5087,7 +5267,9 @@
 						"live-preview": false
 					},
 					"uid": 144,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -5128,7 +5310,9 @@
 						"live-preview": false
 					},
 					"uid": 174,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -5169,7 +5353,9 @@
 						"live-preview": false
 					},
 					"uid": 175,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -5210,7 +5396,9 @@
 						"live-preview": false
 					},
 					"uid": 176,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -5251,7 +5439,9 @@
 						"live-preview": false
 					},
 					"uid": 177,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -5292,7 +5482,9 @@
 						"live-preview": false
 					},
 					"uid": 178,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -5333,7 +5525,9 @@
 						"live-preview": false
 					},
 					"uid": 179,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -5374,7 +5568,9 @@
 						"live-preview": false
 					},
 					"uid": 180,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -5415,7 +5611,9 @@
 						"live-preview": false
 					},
 					"uid": 181,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"frame": 0
+					},
 					"behaviors": {},
 					"effects": {
 						"Tint": {
@@ -5704,6 +5902,340 @@
 			"global": false
 		},
 		{
+			"name": "people",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "peopleSpawn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 399,
+					"instanceVariables": {},
+					"behaviors": {
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": -80,
+						"y": 880,
+						"width": 80,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "peopleSpawn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 400,
+					"instanceVariables": {},
+					"behaviors": {
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": -80,
+						"y": 2080,
+						"width": 80,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "peopleSpawn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 401,
+					"instanceVariables": {},
+					"behaviors": {
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 4240,
+						"y": 800,
+						"width": 80,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 3.141592653589793,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "peopleSpawn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 402,
+					"instanceVariables": {},
+					"behaviors": {
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 4240,
+						"y": 2240,
+						"width": 80,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 3.141592653589793,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "peopleSpawn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 403,
+					"instanceVariables": {},
+					"behaviors": {
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 1600,
+						"y": -80,
+						"width": 80,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5707963267948966,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "peopleSpawn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 404,
+					"instanceVariables": {},
+					"behaviors": {
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 2800,
+						"y": -80,
+						"width": 80,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5707963267948966,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "peopleSpawn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 405,
+					"instanceVariables": {},
+					"behaviors": {
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 1440,
+						"y": 3120,
+						"width": 80,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.71238898038469,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "peopleSpawn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 406,
+					"instanceVariables": {},
+					"behaviors": {
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 2640,
+						"y": 2960,
+						"width": 80,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.71238898038469,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "people",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 407,
+					"instanceVariables": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 150,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": -480,
+						"y": 160,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5613382899628253,
+						"color": [
+							1,
+							1,
+							1,
+							0.5
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 921089463608616,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
 			"name": "memory",
 			"overriden": 0,
 			"instances": [
@@ -5762,7 +6294,7 @@
 						"color": [
 							1,
 							1,
-							0,
+							1,
 							0.2
 						],
 						"angle": 0,
@@ -7908,6 +8440,81 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "zoomOutFinal",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 200,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2080,
+						"y": 1440,
+						"width": 80,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "zoomOutFocus",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 195,
+					"instanceVariables": {},
+					"behaviors": {
+						"ScrollTo": {
+							"properties": {
+								"enabled": false
+							}
+						},
+						"Bullet": {
+							"properties": {
+								"speed": 150,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": false
+							}
+						}
+					},
+					"world": {
+						"x": 2080,
+						"y": 1440,
+						"width": 80,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 935508674296159,
@@ -8256,25 +8863,56 @@
 			"global": false
 		},
 		{
-			"name": "effects",
+			"name": "fog",
 			"overriden": 0,
-			"instances": [],
-			"sid": 257176310367325,
+			"instances": [
+				{
+					"type": "light",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 408,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 4800,
+						"y": -560,
+						"width": 1280,
+						"height": 1280,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0,
+						"blendMode": "destination-out"
+					}
+				}
+			],
+			"sid": 742670788244566,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
 				1,
 				1,
 				1,
-				1
+				0.8
 			],
 			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
+				0,
+				0,
+				0,
 				1
 			],
-			"isTransparent": true,
+			"isTransparent": false,
 			"parallaxX": 1,
 			"parallaxY": 1,
 			"scaleRate": 1,
@@ -8404,52 +9042,6 @@
 					}
 				},
 				{
-					"type": "zoomOutFocus",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 195,
-					"instanceVariables": {},
-					"behaviors": {
-						"ScrollTo": {
-							"properties": {
-								"enabled": false
-							}
-						},
-						"Bullet": {
-							"properties": {
-								"speed": 150,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
-								"enabled": false
-							}
-						}
-					},
-					"world": {
-						"x": 2080,
-						"y": 1440,
-						"width": 80,
-						"height": 80,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "bomb",
 					"properties": {
 						"initially-visible": true,
@@ -8521,35 +9113,6 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				},
-				{
-					"type": "zoomOutFinal",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 200,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 2080,
-						"y": 1440,
-						"width": 80,
-						"height": 80,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
 				}
 			],
 			"sid": 551337182952405,
@@ -8571,6 +9134,147 @@
 			"parallaxX": 0,
 			"parallaxY": 0,
 			"scaleRate": 0,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "levelFade",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "fadeToBlack",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 396,
+					"instanceVariables": {},
+					"behaviors": {
+						"FadeIn": {
+							"properties": {
+								"fade-in-time": 3,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"FadeOut": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 1,
+								"fade-out-time": 3,
+								"destroy": true,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 4240,
+						"height": 2960,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "buildingsMiddle",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 397,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -960,
+						"y": 80,
+						"width": 40,
+						"height": 40,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "peopleSpawn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 398,
+					"instanceVariables": {},
+					"behaviors": {
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": -80,
+						"y": 800,
+						"width": 80,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 142947864850717,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"useRenderCells": false,
 			"blendMode": "normal",

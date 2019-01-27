@@ -2,7 +2,7 @@
 	"name": "junctions",
 	"plugin-id": "Sprite",
 	"sid": 367243056637536,
-	"isGlobal": false,
+	"isGlobal": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [
@@ -40,6 +40,39 @@
 				],
 				"sid": 786080921262492,
 				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 240,
+						"height": 240,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\streets\\3_destroyed.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 135,
+						"duration": 1
+					},
+					{
+						"width": 240,
+						"height": 240,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\streets\\6_destroyed.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 136,
+						"duration": 1
+					}
+				],
+				"sid": 292069998368242,
+				"name": "Destroyed",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

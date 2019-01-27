@@ -1,0 +1,56 @@
+{
+	"name": "light",
+	"plugin-id": "Sprite",
+	"sid": 780004371079125,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 182,
+						"height": 182,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\light (2).png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 134,
+						"collisionPoly": {
+							"points": [
+								0.25824175824175827,
+								0.25824175824175827,
+								0.5,
+								0.15934065934065933,
+								0.7362637362637363,
+								0.25824175824175827,
+								0.8351648351648352,
+								0.5,
+								0.7362637362637363,
+								0.7362637362637363,
+								0.5,
+								0.8351648351648352,
+								0.25824175824175827,
+								0.7362637362637363,
+								0.15934065934065933,
+								0.5
+							]
+						},
+						"duration": 1
+					}
+				],
+				"sid": 749937420307648,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

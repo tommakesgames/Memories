@@ -33,6 +33,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "present",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 317016832195959
+		},
+		{
+			"eventType": "variable",
 			"name": "dropBombInterval",
 			"type": "number",
 			"initialValue": "2",
@@ -60,6 +70,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 465627950951279
+		},
+		{
+			"eventType": "variable",
+			"name": "endCutscene",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 259075678925682
 		},
 		{
 			"eventType": "variable",
@@ -180,6 +200,143 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 462048459546722
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 971845332990697
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 302885805762800,
+					"parameters": {
+						"variable": "initialEnergyBarHeight",
+						"value": "energyBar.Height"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "memoryClear",
+					"sid": 491517080916413
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "buildings",
+					"sid": 854937942661334,
+					"parameters": {
+						"frame-number": "random(buildings.AnimationFrameCount)"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "roads",
+					"sid": 770803928085314,
+					"parameters": {
+						"frame-number": "random(roads.AnimationFrameCount)"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "junctions",
+					"sid": 964324513360845,
+					"parameters": {
+						"frame-number": "random(junctions.AnimationFrameCount)"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "fadeToBlack",
+					"sid": 688151434799171,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "buildingsMiddle",
+					"sid": 507678883253642,
+					"parameters": {
+						"object": "buildings",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "peopleSpawn",
+					"sid": 365562717578964,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "random(1,3)",
+						"type": "once",
+						"tag": "\"spawn1\""
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "peopleSpawn",
+					"sid": 603219565277443,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "random(1,3)",
+						"type": "once",
+						"tag": "\"spawn2\""
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "peopleSpawn",
+					"sid": 496136225804960,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "random(1,3)",
+						"type": "once",
+						"tag": "\"spawn3\""
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 869268348816946,
+					"parameters": {
+						"layer": "6",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 648243018666631,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-random-instance",
+							"objectClass": "System",
+							"sid": 303332656341631,
+							"parameters": {
+								"object": "startPoint"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "player",
+							"sid": 303404656729288,
+							"parameters": {
+								"object": "startPoint",
+								"image-point-optional": "1"
+							}
+						}
+					],
+					"sid": 846474344927812
+				}
+			]
 		},
 		{
 			"eventType": "group",
@@ -482,9 +639,9 @@
 								{
 									"id": "set-animation",
 									"objectClass": "buildings",
-									"sid": 628215124546655,
+									"sid": 693370611567814,
 									"parameters": {
-										"animation": "\"Default\"",
+										"animation": "\"Past\"",
 										"from": "beginning"
 									}
 								}
@@ -517,87 +674,204 @@
 						}
 					],
 					"sid": 508060661952409
-				}
-			],
-			"sid": 640762880251818
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 502166315277921
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 950460006796465,
-					"parameters": {
-						"variable": "initialEnergyBarHeight",
-						"value": "energyBar.Height"
-					}
 				},
-				{
-					"id": "destroy",
-					"objectClass": "memoryClear",
-					"sid": 894292366299457
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "buildings",
-					"sid": 397961824184738,
-					"parameters": {
-						"frame-number": "random(buildings.AnimationFrameCount)"
-					}
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "roads",
-					"sid": 817671226807283,
-					"parameters": {
-						"frame-number": "random(roads.AnimationFrameCount)"
-					}
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "junctions",
-					"sid": 844487765465839,
-					"parameters": {
-						"frame-number": "random(junctions.AnimationFrameCount)"
-					}
-				}
-			],
-			"sid": 891339305556636,
-			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "pick-random-instance",
-							"objectClass": "System",
-							"sid": 491275419310907,
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 348054331581945,
 							"parameters": {
-								"object": "startPoint"
+								"key": 70
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-position-to-another-object",
-							"objectClass": "player",
-							"sid": 447068366968765,
+							"id": "start-fade",
+							"objectClass": "fadeToBlack",
+							"sid": 517324529987151,
+							"behaviorType": "FadeIn"
+						}
+					],
+					"sid": 897124283424387
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 328700826575972,
 							"parameters": {
-								"object": "startPoint",
-								"image-point-optional": "1"
+								"key": 71
 							}
 						}
 					],
-					"sid": 599310969281352
+					"actions": [
+						{
+							"id": "start-fade",
+							"objectClass": "fadeToBlack",
+							"sid": 506646677165622,
+							"behaviorType": "FadeOut"
+						}
+					],
+					"sid": 613031314515046
 				}
-			]
+			],
+			"sid": 640762880251818
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SpawnPeople",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "peopleSpawn",
+							"sid": 138742400601673,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"spawn1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "peopleSpawn",
+							"sid": 185559926558022,
+							"parameters": {
+								"object": "people",
+								"layer": "2",
+								"image-point": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "people",
+							"sid": 572669741451761,
+							"parameters": {
+								"animation": "\"1\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "peopleSpawn",
+							"sid": 284797553955824,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "random(1,3)",
+								"type": "once",
+								"tag": "\"spawn1\""
+							}
+						}
+					],
+					"sid": 925567009988139
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "peopleSpawn",
+							"sid": 672956425489336,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"spawn2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "peopleSpawn",
+							"sid": 611653431566095,
+							"parameters": {
+								"object": "people",
+								"layer": "2",
+								"image-point": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "people",
+							"sid": 597275508092589,
+							"parameters": {
+								"animation": "\"2\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "peopleSpawn",
+							"sid": 872821896730132,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "random(1,3)",
+								"type": "once",
+								"tag": "\"spawn1\""
+							}
+						}
+					],
+					"sid": 778952836500937
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "peopleSpawn",
+							"sid": 498685054184521,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"spawn3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "peopleSpawn",
+							"sid": 247164473440241,
+							"parameters": {
+								"object": "people",
+								"layer": "2",
+								"image-point": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "people",
+							"sid": 906135669729343,
+							"parameters": {
+								"animation": "\"3\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "peopleSpawn",
+							"sid": 273636289063215,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "random(1,3)",
+								"type": "once",
+								"tag": "\"spawn1\""
+							}
+						}
+					],
+					"sid": 634025008491455
+				}
+			],
+			"sid": 809790947389121
 		},
 		{
 			"eventType": "group",
@@ -1043,21 +1317,21 @@
 						{
 							"id": "on-start-of-layout",
 							"objectClass": "System",
-							"sid": 865587762681843
+							"sid": 724451629083155
 						}
 					],
 					"actions": [
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 204728268250089,
+							"sid": 144425267009713,
 							"parameters": {
 								"variable": "specialBuildingsCounter",
 								"value": "specialBuildings"
 							}
 						}
 					],
-					"sid": 779426251071402,
+					"sid": 877798959409249,
 					"children": [
 						{
 							"eventType": "block",
@@ -1065,12 +1339,12 @@
 								{
 									"id": "while",
 									"objectClass": "System",
-									"sid": 418177526686408
+									"sid": 926460193861819
 								},
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 848436758567810,
+									"sid": 690602647905648,
 									"parameters": {
 										"first-value": "specialBuildingsCounter",
 										"comparison": 4,
@@ -1079,7 +1353,7 @@
 								}
 							],
 							"actions": [],
-							"sid": 427528343629347,
+							"sid": 627079751138977,
 							"children": [
 								{
 									"eventType": "block",
@@ -1087,7 +1361,7 @@
 										{
 											"id": "pick-random-instance",
 											"objectClass": "System",
-											"sid": 833397073503071,
+											"sid": 409381316571397,
 											"parameters": {
 												"object": "buildings"
 											}
@@ -1095,7 +1369,7 @@
 										{
 											"id": "is-boolean-instance-variable-set",
 											"objectClass": "buildings",
-											"sid": 931342745372396,
+											"sid": 318246480864134,
 											"parameters": {
 												"instance-variable": "special"
 											},
@@ -1106,7 +1380,7 @@
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "buildings",
-											"sid": 129512048099047,
+											"sid": 489727557107204,
 											"parameters": {
 												"instance-variable": "special",
 												"value": "true"
@@ -1115,14 +1389,14 @@
 										{
 											"id": "subtract-from-eventvar",
 											"objectClass": "System",
-											"sid": 375567919272120,
+											"sid": 585004446905672,
 											"parameters": {
 												"variable": "specialBuildingsCounter",
 												"value": "1"
 											}
 										}
 									],
-									"sid": 537087155546301
+									"sid": 158185958154324
 								}
 							]
 						}
@@ -1132,19 +1406,17 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-overlapping-at-offset",
+							"id": "is-overlapping-another-object",
 							"objectClass": "clearCircle",
-							"sid": 266484769957447,
+							"sid": 655431388989467,
 							"parameters": {
-								"object": "buildings",
-								"offset-x": "buildings.Width/2",
-								"offset-y": "buildings.Height/2"
+								"object": "buildingsMiddle"
 							}
 						},
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "buildings",
-							"sid": 688680026980265,
+							"sid": 214121204498707,
 							"parameters": {
 								"instance-variable": "special"
 							}
@@ -1152,7 +1424,7 @@
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "buildings",
-							"sid": 360767876004292,
+							"sid": 836700780031198,
 							"parameters": {
 								"instance-variable": "discovered"
 							},
@@ -1163,7 +1435,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 234132565005319,
+							"sid": 265411186477880,
 							"parameters": {
 								"audio-file": "Pickup_Coin",
 								"loop": "not-looping",
@@ -1174,7 +1446,7 @@
 						{
 							"id": "set-boolean-instvar",
 							"objectClass": "buildings",
-							"sid": 797097490731272,
+							"sid": 152276176350425,
 							"parameters": {
 								"instance-variable": "discovered",
 								"value": "true"
@@ -1183,14 +1455,14 @@
 						{
 							"id": "set-active",
 							"objectClass": "buildings",
-							"sid": 191140007302995,
+							"sid": 793750924733079,
 							"behaviorType": "Sine",
 							"parameters": {
 								"state": "active"
 							}
 						}
 					],
-					"sid": 792797652789556
+					"sid": 363580518043858
 				}
 			],
 			"sid": 882351859350029
@@ -1235,6 +1507,32 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-timer",
+							"objectClass": "player",
+							"sid": 107564743532185,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"cutscene\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 468339570085349,
+							"parameters": {
+								"variable": "endCutscene",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 430366903469304
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "is-group-active",
 							"objectClass": "System",
 							"sid": 207800254527533,
@@ -1267,10 +1565,10 @@
 						{
 							"id": "start-timer",
 							"objectClass": "player",
-							"sid": 801823379431712,
+							"sid": 988342041029471,
 							"behaviorType": "Timer",
 							"parameters": {
-								"duration": "13",
+								"duration": "10",
 								"type": "once",
 								"tag": "\"cutscene\""
 							}
@@ -1343,6 +1641,14 @@
 							"behaviorType": "Bullet",
 							"parameters": {
 								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "energyBar",
+							"sid": 458366677844442,
+							"parameters": {
+								"visibility": "invisible"
 							}
 						}
 					],
@@ -1502,7 +1808,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "plane",
-							"sid": 474952717647021,
+							"sid": 715319491565810,
 							"parameters": {
 								"object": "bomb",
 								"layer": "4",
@@ -1512,10 +1818,10 @@
 						{
 							"id": "set-angle-of-motion",
 							"objectClass": "bomb",
-							"sid": 759717523287600,
+							"sid": 896086541992140,
 							"behaviorType": "Bullet",
 							"parameters": {
-								"angle": "random(360)"
+								"angle": "random(45, 300)"
 							}
 						},
 						{
@@ -1529,10 +1835,10 @@
 						{
 							"id": "start-timer",
 							"objectClass": "bomb",
-							"sid": 912575127109380,
+							"sid": 520147751649743,
 							"behaviorType": "Timer",
 							"parameters": {
-								"duration": "random(1,3)",
+								"duration": "random(2,4)",
 								"type": "once",
 								"tag": "\"detonate\""
 							}
@@ -1631,20 +1937,378 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-timer",
-							"objectClass": "player",
-							"sid": 683303688677367,
-							"behaviorType": "Timer",
+							"id": "is-outside-layout",
+							"objectClass": "plane",
+							"sid": 359957424207541
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 659099768298385,
 							"parameters": {
-								"tag": "\"cutscene\""
+								"variable": "endCutscene"
 							}
 						}
 					],
-					"actions": [],
-					"sid": 943838660505135
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "plane",
+							"sid": 589123353923465
+						}
+					],
+					"sid": 354528176104133
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 277907524347215,
+							"parameters": {
+								"variable": "endCutscene"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 625825718772485,
+							"parameters": {
+								"first-value": "plane.Count",
+								"comparison": 2,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "start-fade",
+							"objectClass": "fadeToBlack",
+							"sid": 285832845986394,
+							"behaviorType": "FadeIn"
+						}
+					],
+					"sid": 550978283926871
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-fade-in-finished",
+							"objectClass": "fadeToBlack",
+							"sid": 871370666141459,
+							"behaviorType": "FadeIn"
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 628086581810465,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "fadeToBlack",
+							"sid": 329760146127429
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 147554298898504,
+							"parameters": {
+								"group-name": "\"Present\"",
+								"state": "activated"
+							}
+						}
+					],
+					"sid": 856619989025576
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "detonation",
+							"sid": 158425290135748,
+							"parameters": {
+								"object": "structures"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "structures",
+							"sid": 170587640420009,
+							"parameters": {
+								"instance-variable": "frame",
+								"value": "structures.AnimationFrame"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "structures",
+							"sid": 909827320531470,
+							"parameters": {
+								"animation": "\"Destroyed\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "structures",
+							"sid": 412307309144669,
+							"parameters": {
+								"frame-number": "structures.frame"
+							}
+						}
+					],
+					"sid": 511755077931480
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "detonation",
+							"sid": 816484970628390,
+							"parameters": {
+								"object": "people"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "people",
+							"sid": 349888426798836
+						}
+					],
+					"sid": 790569967954976
 				}
 			],
 			"sid": 900800675378024
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Present",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-group-active",
+							"objectClass": "System",
+							"sid": 468338840133134,
+							"parameters": {
+								"group-name": "\"Present\""
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 912962380644253
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "player",
+							"sid": 803821900504350,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "player",
+							"sid": 602540753856435,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "zoomOutFocus",
+							"sid": 269960382474192,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "player",
+							"sid": 626469779561791,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-ignoring-input",
+							"objectClass": "player",
+							"sid": 330596467748898,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"input": "stop-ignoring"
+							}
+						},
+						{
+							"id": "set-layout-scale",
+							"objectClass": "System",
+							"sid": 796878425389099,
+							"parameters": {
+								"scale": "zoomInScale"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 693830550824918,
+							"parameters": {
+								"group-name": "\"Cutscene\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 561241761199362,
+							"parameters": {
+								"group-name": "\"Present\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 607239290759324,
+							"parameters": {
+								"layer": "6",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "people",
+							"sid": 474863344528896
+						},
+						{
+							"id": "destroy",
+							"objectClass": "peopleSpawn",
+							"sid": 344894387111118
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "structures",
+							"sid": 472566605720972,
+							"parameters": {
+								"instance-variable": "frame",
+								"value": "structures.AnimationFrame"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "structures",
+							"sid": 346732658012167,
+							"parameters": {
+								"animation": "\"Destroyed\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "structures",
+							"sid": 727797273372901,
+							"parameters": {
+								"frame-number": "structures.frame"
+							}
+						}
+					],
+					"sid": 785635759332047,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 226461882268536,
+									"parameters": {
+										"object": "memoryClear"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 503346359210508,
+									"parameters": {
+										"object-to-create": "light",
+										"layer": "6",
+										"x": "memoryClear.X",
+										"y": "memoryClear.Y"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "light",
+									"sid": 480376278170380,
+									"parameters": {
+										"width": "memoryClear.Width+50",
+										"height": "memoryClear.Height+50"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "memoryClear",
+									"sid": 325290371083210,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 777195505909142
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-random-instance",
+									"objectClass": "System",
+									"sid": 414995801105396,
+									"parameters": {
+										"object": "startPoint"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "player",
+									"sid": 499278431715962,
+									"parameters": {
+										"object": "startPoint",
+										"image-point-optional": "0"
+									}
+								}
+							],
+							"sid": 898413321950782
+						}
+					]
+				}
+			],
+			"sid": 796920862058113
 		}
 	],
 	"sid": 164693033357527

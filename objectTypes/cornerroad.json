@@ -2,7 +2,7 @@
 	"name": "cornerRoad",
 	"plugin-id": "Sprite",
 	"sid": 804866456413716,
-	"isGlobal": false,
+	"isGlobal": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [
@@ -49,6 +49,28 @@
 				],
 				"sid": 631174576018469,
 				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\streets\\1_destroyed.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 73,
+						"duration": 1
+					}
+				],
+				"sid": 107989429401595,
+				"name": "Destroyed",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
