@@ -1,0 +1,47 @@
+{
+	"name": "zoomOutFocus",
+	"plugin-id": "Sprite",
+	"sid": 386121140517142,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 361543063819775
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 721332207735229
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 80,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 11,
+						"duration": 1
+					}
+				],
+				"sid": 856607207044290,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

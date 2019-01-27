@@ -1,0 +1,112 @@
+{
+	"name": "bomb",
+	"plugin-id": "Sprite",
+	"sid": 764794886760910,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 526572600903748
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 751886325815885
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 392,
+						"height": 363,
+						"originX": 0.4897959183673469,
+						"originY": 0.5013774104683195,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\bombs\\bomb1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 24,
+						"collisionPoly": {
+							"points": [
+								0.9693877551020408,
+								0.5013774104683195,
+								0.6428571428571428,
+								0.6639118457300276,
+								0.4897959183673469,
+								0.652892561983471,
+								0.35459183673469397,
+								0.6473829201101927,
+								0.010204081632653073,
+								0.5013774104683195,
+								0.3214285714285714,
+								0.3168044077134986,
+								0.4897959183673469,
+								0.2975206611570248,
+								0.6658163265306123,
+								0.31129476584022037
+							]
+						},
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 1.0025510204081634,
+								"y": 0.4986225895316804
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\bombs\\bomb2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 25,
+						"collisionPoly": {
+							"points": [
+								0.9675,
+								0.5,
+								0.675,
+								0.6725,
+								0.5,
+								0.6825,
+								0.2825,
+								0.7175,
+								0.040000000000000036,
+								0.5,
+								0.25249999999999995,
+								0.25,
+								0.5,
+								0.3425,
+								0.645,
+								0.355
+							]
+						},
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 1.0025510204081634,
+								"y": 0.4986225895316804
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 528483933732141,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

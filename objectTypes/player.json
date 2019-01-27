@@ -24,6 +24,11 @@
 			"behaviorId": "bound",
 			"name": "BoundToLayout",
 			"sid": 306554887863003
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 937330056585903
 		}
 	],
 	"effectTypes": [],

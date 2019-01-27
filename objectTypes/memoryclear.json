@@ -2,7 +2,7 @@
 	"name": "memoryClear",
 	"plugin-id": "Sprite",
 	"sid": 521327125921201,
-	"isGlobal": false,
+	"isGlobal": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
@@ -18,7 +18,7 @@
 						"originalSource": "C:\\Users\\Tom\\Downloads\\Default.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 90,
+						"imageSpriteId": 2,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -43,7 +43,7 @@
 					}
 				],
 				"sid": 969811592576166,
-				"name": "Animation 1",
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

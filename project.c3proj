@@ -55,9 +55,33 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r135.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r135.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
+			"author": "Scirra",
+			"version": "r135.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
 			"author": "Scirra",
 			"version": "r135.2",
 			"bundled": false
@@ -104,8 +128,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Sin",
-			"name": "Sine",
+			"id": "Bullet",
+			"name": "Bullet",
 			"author": "Scirra",
 			"version": "r135.2",
 			"bundled": false
@@ -152,7 +176,15 @@
 			"roads",
 			"junctions",
 			"cornerRoad",
-			"walls"
+			"walls",
+			"scaleText",
+			"exit",
+			"plane",
+			"SelectedParticles",
+			"zoomOutFocus",
+			"bomb",
+			"detonation",
+			"zoomOutFinal"
 		],
 		"subfolders": []
 	},
@@ -164,7 +196,8 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Past",
+			"Present"
 		],
 		"subfolders": []
 	},
@@ -179,6 +212,14 @@
 			"items": [
 				{
 					"name": "Hit_Hurt3.webm",
+					"type": "audio/webm; codecs=opus"
+				},
+				{
+					"name": "Pickup_Coin.webm",
+					"type": "audio/webm; codecs=opus"
+				},
+				{
+					"name": "Explosion23.webm",
 					"type": "audio/webm; codecs=opus"
 				}
 			],

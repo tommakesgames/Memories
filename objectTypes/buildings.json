@@ -9,6 +9,12 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 771477485059360
+		},
+		{
+			"name": "discovered",
+			"type": "boolean",
+			"desc": "",
+			"sid": 314430104337649
 		}
 	],
 	"behaviorTypes": [
@@ -16,6 +22,11 @@
 			"behaviorId": "solid",
 			"name": "Solid",
 			"sid": 346970625569909
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 126317523340049
 		}
 	],
 	"effectTypes": [],
@@ -313,7 +324,7 @@
 					}
 				],
 				"sid": 129379906594048,
-				"name": "Default",
+				"name": "Past",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -348,6 +359,28 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 29,
+						"duration": 1
+					}
+				],
+				"sid": 540097919731320,
+				"name": "Destroyed",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
 			}
 		],
 		"subfolders": []
