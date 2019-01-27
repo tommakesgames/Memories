@@ -307,6 +307,30 @@
 						"layer": "6",
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 101742034838369,
+					"parameters": {
+						"audio-file": "street-daniel_simon",
+						"loop": "looping",
+						"volume": "-10",
+						"tag-optional": "\"streetSound\""
+					}
+				},
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 552301183695420,
+					"parameters": {
+						"scale": "zoomInScale"
+					}
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "player",
+					"sid": 202130432906258
 				}
 			],
 			"sid": 648243018666631,
@@ -337,6 +361,110 @@
 					"sid": 846474344927812
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-button-down",
+					"objectClass": "Gamepad",
+					"sid": 213483402416072,
+					"parameters": {
+						"gamepad": "0",
+						"button": "d-pad-left"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "player",
+					"sid": 472296891989837,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 785922268927337
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-button-down",
+					"objectClass": "Gamepad",
+					"sid": 818751027503153,
+					"parameters": {
+						"gamepad": "0",
+						"button": "d-pad-right"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "player",
+					"sid": 370625711186982,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 467058778723648
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-button-down",
+					"objectClass": "Gamepad",
+					"sid": 763170664135483,
+					"parameters": {
+						"gamepad": "0",
+						"button": "d-pad-down"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "player",
+					"sid": 853304323119613,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "down"
+					}
+				}
+			],
+			"sid": 474895368973833
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-button-down",
+					"objectClass": "Gamepad",
+					"sid": 655447102962011,
+					"parameters": {
+						"gamepad": "0",
+						"button": "d-pad-up"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "player",
+					"sid": 635040065293631,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "up"
+					}
+				}
+			],
+			"sid": 283232460749097
 		},
 		{
 			"eventType": "group",
@@ -1055,6 +1183,11 @@
 							"objectClass": "player",
 							"sid": 246228438635513,
 							"behaviorType": "8Direction"
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 960328262876877
 						}
 					],
 					"actions": [
@@ -1065,6 +1198,25 @@
 							"parameters": {
 								"variable": "playerStartedMoving",
 								"value": "true"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 728004836245946,
+							"parameters": {
+								"audio-file": "hard_shoes_1-daniel_simon",
+								"loop": "looping",
+								"volume": "0",
+								"tag-optional": "\"walkSound\""
+							}
+						},
+						{
+							"id": "start-animation",
+							"objectClass": "player",
+							"sid": 800943978171060,
+							"parameters": {
+								"from": "current-frame"
 							}
 						}
 					],
@@ -1170,6 +1322,19 @@
 								"type": "once",
 								"tag": "\"startCircle\""
 							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 134075120942905,
+							"parameters": {
+								"tag": "\"walkSound\""
+							}
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "player",
+							"sid": 142099363690177
 						}
 					],
 					"sid": 686224818391446
@@ -1206,6 +1371,15 @@
 							"sid": 678839046958302,
 							"parameters": {
 								"group-name": "\"Cutscene\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-group-active",
+							"objectClass": "System",
+							"sid": 418897431360290,
+							"parameters": {
+								"group-name": "\"Present\""
 							},
 							"isInverted": true
 						}
@@ -2232,6 +2406,19 @@
 							"parameters": {
 								"frame-number": "structures.frame"
 							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "detonation",
+							"sid": 192038013460365
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 660432952535075,
+							"parameters": {
+								"tag": "\"streetSound\""
+							}
 						}
 					],
 					"sid": 785635759332047,
@@ -2263,10 +2450,10 @@
 								{
 									"id": "set-size",
 									"objectClass": "light",
-									"sid": 480376278170380,
+									"sid": 769583367855441,
 									"parameters": {
-										"width": "memoryClear.Width+50",
-										"height": "memoryClear.Height+50"
+										"width": "memoryClear.Width+150",
+										"height": "memoryClear.Height+150"
 									}
 								},
 								{

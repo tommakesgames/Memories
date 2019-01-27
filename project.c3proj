@@ -244,6 +244,14 @@
 				{
 					"name": "Explosion23.webm",
 					"type": "audio/webm; codecs=opus"
+				},
+				{
+					"name": "hard_shoes_1-daniel_simon.mp3",
+					"type": "audio/mpeg"
+				},
+				{
+					"name": "street-daniel_simon.mp3",
+					"type": "audio/mpeg"
 				}
 			],
 			"subfolders": []
