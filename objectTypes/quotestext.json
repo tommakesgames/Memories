@@ -1,0 +1,15 @@
+{
+	"name": "quotesText",
+	"plugin-id": "Text",
+	"sid": 848761563477704,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 589833623340320
+		}
+	],
+	"effectTypes": []
+}

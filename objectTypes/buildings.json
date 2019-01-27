@@ -370,7 +370,7 @@
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\1_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 41,
+						"imageSpriteId": 144,
 						"duration": 1
 					},
 					{
@@ -381,7 +381,7 @@
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\2_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 42,
+						"imageSpriteId": 146,
 						"duration": 1
 					},
 					{
@@ -392,7 +392,7 @@
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\3_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 43,
+						"imageSpriteId": 143,
 						"duration": 1
 					},
 					{
@@ -403,7 +403,7 @@
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\4_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 44,
+						"imageSpriteId": 147,
 						"duration": 1
 					},
 					{
@@ -414,7 +414,7 @@
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\5_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 45,
+						"imageSpriteId": 145,
 						"duration": 1
 					},
 					{
@@ -425,18 +425,18 @@
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\6_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 46,
+						"imageSpriteId": 148,
 						"duration": 1
 					},
 					{
-						"width": 677,
-						"height": 666,
+						"width": 400,
+						"height": 400,
 						"originX": 0,
 						"originY": 0,
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\7_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 47,
+						"imageSpriteId": 149,
 						"duration": 1
 					},
 					{
@@ -447,7 +447,7 @@
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\8_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 48,
+						"imageSpriteId": 152,
 						"duration": 1
 					},
 					{
@@ -458,7 +458,7 @@
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\9_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 49,
+						"imageSpriteId": 150,
 						"duration": 1
 					},
 					{
@@ -469,7 +469,7 @@
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\10_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 50,
+						"imageSpriteId": 153,
 						"duration": 1
 					},
 					{
@@ -480,18 +480,18 @@
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\11_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 51,
+						"imageSpriteId": 151,
 						"duration": 1
 					},
 					{
-						"width": 683,
-						"height": 701,
+						"width": 400,
+						"height": 400,
 						"originX": 0,
 						"originY": 0,
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\12_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 68,
+						"imageSpriteId": 155,
 						"duration": 1
 					},
 					{
@@ -502,40 +502,40 @@
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\13_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 69,
+						"imageSpriteId": 156,
 						"duration": 1
 					},
 					{
-						"width": 682,
-						"height": 688,
+						"width": 400,
+						"height": 400,
 						"originX": 0,
 						"originY": 0,
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\14_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 70,
+						"imageSpriteId": 154,
 						"duration": 1
 					},
 					{
-						"width": 682,
-						"height": 690,
+						"width": 400,
+						"height": 400,
 						"originX": 0,
 						"originY": 0,
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\15_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 71,
+						"imageSpriteId": 157,
 						"duration": 1
 					},
 					{
-						"width": 694,
-						"height": 688,
+						"width": 400,
+						"height": 400,
 						"originX": 0,
 						"originY": 0,
 						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\houses\\16_destroyed.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 72,
+						"imageSpriteId": 158,
 						"duration": 1
 					}
 				],

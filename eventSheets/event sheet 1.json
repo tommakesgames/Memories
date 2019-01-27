@@ -202,6 +202,16 @@
 			"sid": 462048459546722
 		},
 		{
+			"eventType": "variable",
+			"name": "quoteChoice",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 409784843436138
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -331,6 +341,39 @@
 					"id": "stop-animation",
 					"objectClass": "player",
 					"sid": 202130432906258
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "quotesText",
+					"sid": 294544326318532,
+					"parameters": {
+						"object": "memoryBG",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "pin-to-object",
+					"objectClass": "quotesText",
+					"sid": 867937563203434,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "memoryBG",
+						"mode": "position-angle"
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "quotesText",
+					"sid": 130609913534745
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 809751481892730,
+					"parameters": {
+						"tag": "\"quotes\"",
+						"file": "quotes.json"
+					}
 				}
 			],
 			"sid": 648243018666631,
@@ -361,6 +404,30 @@
 					"sid": 846474344927812
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 405357615336694,
+					"parameters": {
+						"tag": "\"quotes\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "Array",
+					"sid": 637803772770522,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 983162449163618
 		},
 		{
 			"eventType": "block",
@@ -2493,6 +2560,118 @@
 							"sid": 898413321950782
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player",
+							"sid": 424845224933246,
+							"parameters": {
+								"object": "buildings"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "buildings",
+							"sid": 839791916071608,
+							"parameters": {
+								"instance-variable": "discovered"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "memoryBG",
+							"sid": 292756245415136,
+							"parameters": {
+								"x": "OriginalViewportWidth/2",
+								"y": "OriginalViewportHeight/2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 492131930904589,
+							"parameters": {
+								"variable": "quoteChoice",
+								"value": "random(Array.Width-1)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "quotesText",
+							"sid": 189407693275488,
+							"parameters": {
+								"text": "Array.At(quoteChoice, 0)"
+							}
+						},
+						{
+							"id": "delete",
+							"objectClass": "Array",
+							"sid": 733022370251925,
+							"parameters": {
+								"index": "quoteChoice",
+								"axis": "x"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "player",
+							"sid": 358655192425022,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 948783998938400,
+							"parameters": {
+								"seconds": "5"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "player",
+							"sid": 640269222205362,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "memoryBG",
+							"sid": 893150825966489,
+							"parameters": {
+								"x": "-1000",
+								"y": "-1000"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "buildings",
+							"sid": 404668875432967,
+							"parameters": {
+								"instance-variable": "discovered",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "buildings",
+							"sid": 175600927096210,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 374836554370409
 				}
 			],
 			"sid": 796920862058113

@@ -9159,6 +9159,35 @@
 						"zElevation": 0,
 						"blendMode": "destination-out"
 					}
+				},
+				{
+					"type": "memoryBG",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 417,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -1040,
+						"y": -2240,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 742670788244566,
@@ -9377,6 +9406,81 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "memoryBG",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 418,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1680,
+						"y": -1280,
+						"width": 880,
+						"height": 560,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "quotesText",
+					"properties": {
+						"text": "Text",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 14,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 420,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 1280,
+						"y": -1440,
+						"width": 720,
+						"height": 320,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 551337182952405,
@@ -9546,7 +9650,18 @@
 		}
 	],
 	"sid": 807414024415615,
-	"nonworld-instances": [],
+	"nonworld-instances": [
+		{
+			"type": "Array",
+			"properties": {
+				"width": 10,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 419,
+			"instanceVariables": {}
+		}
+	],
 	"effectTypes": [
 		{
 			"effectId": "noise",

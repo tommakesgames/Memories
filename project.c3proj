@@ -79,6 +79,22 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"version": "r135.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"version": "r135.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -143,6 +159,14 @@
 			"bundled": false
 		},
 		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r135.2",
+			"bundled": false
+		},
+		{
 			"type": "effect",
 			"id": "vignette",
 			"name": "Vignette",
@@ -198,7 +222,11 @@
 			"buildingsMiddle",
 			"peopleSpawn",
 			"people",
-			"light"
+			"light",
+			"memoryBG",
+			"Array",
+			"quotesText",
+			"AJAX"
 		],
 		"subfolders": []
 	},
@@ -302,7 +330,12 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [],
+			"items": [
+				{
+					"name": "quotes.json",
+					"type": "application/json"
+				}
+			],
 			"subfolders": [
 				{
 					"items": [
