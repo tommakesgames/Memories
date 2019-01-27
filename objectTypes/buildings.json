@@ -3,7 +3,14 @@
 	"plugin-id": "Sprite",
 	"sid": 397513335394332,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "special",
+			"type": "boolean",
+			"desc": "",
+			"sid": 771477485059360
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
@@ -25,6 +32,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 53,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -36,6 +50,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 52,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -47,6 +68,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 57,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -58,6 +86,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 55,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -69,6 +104,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 56,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -80,6 +122,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 54,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -91,6 +140,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 58,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -102,6 +158,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 59,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -113,6 +176,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 62,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -124,6 +194,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 61,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -135,6 +212,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 60,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -146,6 +230,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 63,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -157,6 +248,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 64,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -168,6 +266,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 65,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -179,6 +284,13 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 66,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -190,11 +302,47 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 67,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					}
 				],
 				"sid": 129379906594048,
 				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 94,
+						"imagePoints": [
+							{
+								"name": "centre",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 311308490333883,
+				"name": "Selected",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

@@ -1,48 +1,53 @@
 {
-	"name": "memoryClear",
+	"name": "cornerRoad",
 	"plugin-id": "Sprite",
-	"sid": 521327125921201,
+	"sid": 804866456413716,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "tint",
+			"name": "Tint"
+		}
+	],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 172,
-						"height": 172,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "C:\\Users\\Tom\\Downloads\\Default.png",
+						"width": 240,
+						"height": 240,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\streets\\1.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 90,
+						"imageSpriteId": 85,
 						"collisionPoly": {
 							"points": [
 								0,
 								0,
-								0.5174418604651163,
+								0.5,
 								0,
-								1,
+								0.9975,
 								0,
-								1,
-								0.5174418604651163,
-								1,
-								1,
-								0.5174418604651163,
-								1,
+								0.9975,
+								0.5,
+								0.9975,
+								0.9975,
+								0.5,
+								0.9975,
 								0,
-								1,
+								0.9975,
 								0,
-								0.5174418604651163
+								0.5
 							]
 						},
 						"duration": 1
 					}
 				],
-				"sid": 969811592576166,
+				"sid": 631174576018469,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

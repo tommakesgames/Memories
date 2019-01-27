@@ -1,0 +1,52 @@
+{
+	"name": "junctions",
+	"plugin-id": "Sprite",
+	"sid": 367243056637536,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "tint",
+			"name": "Tint"
+		}
+	],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 240,
+						"height": 240,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\streets\\3.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 81,
+						"duration": 1
+					},
+					{
+						"width": 240,
+						"height": 240,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\streets\\6.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 82,
+						"duration": 1
+					}
+				],
+				"sid": 786080921262492,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
