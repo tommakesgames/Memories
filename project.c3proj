@@ -109,6 +109,30 @@
 			"author": "Scirra",
 			"version": "r135.2",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "vignette",
+			"name": "Vignette",
+			"author": "Brad Larson",
+			"version": "r135.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "tint",
+			"name": "Tint",
+			"author": "Scirra",
+			"version": "r135.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "noise",
+			"name": "Noise",
+			"author": "Scirra",
+			"version": "r135.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "6g1qnl6cj7h",
@@ -125,7 +149,10 @@
 			"memoryClear",
 			"energyBar",
 			"startPoint",
-			"wall"
+			"roads",
+			"junctions",
+			"cornerRoad",
+			"walls"
 		],
 		"subfolders": []
 	},

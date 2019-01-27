@@ -1,0 +1,74 @@
+{
+	"name": "roads",
+	"plugin-id": "Sprite",
+	"sid": 673437090495978,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "tint",
+			"name": "Tint"
+		}
+	],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 400,
+						"height": 240,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\streets\\2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 74,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 240,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\streets\\4.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 75,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 240,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\streets\\5.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 76,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 240,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\streets\\7.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 77,
+						"duration": 1
+					}
+				],
+				"sid": 418417347514443,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -53,6 +53,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "memoryClearOpacity",
+			"type": "number",
+			"initialValue": "50",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 428707775501388
+		},
+		{
+			"eventType": "variable",
 			"name": "energy",
 			"type": "number",
 			"initialValue": "100",
@@ -90,6 +100,26 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 961814479776837
+		},
+		{
+			"eventType": "variable",
+			"name": "specialBuildings",
+			"type": "number",
+			"initialValue": "8",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 495854041572848
+		},
+		{
+			"eventType": "variable",
+			"name": "specialBuildingsCounter",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 373422730895566
 		},
 		{
 			"eventType": "group",
@@ -253,9 +283,25 @@
 				{
 					"id": "set-animation-frame",
 					"objectClass": "buildings",
-					"sid": 871707332578500,
+					"sid": 397961824184738,
 					"parameters": {
-						"frame-number": "random(15)"
+						"frame-number": "random(buildings.AnimationFrameCount)"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "roads",
+					"sid": 817671226807283,
+					"parameters": {
+						"frame-number": "random(roads.AnimationFrameCount)"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "junctions",
+					"sid": 844487765465839,
+					"parameters": {
+						"frame-number": "random(junctions.AnimationFrameCount)"
 					}
 				}
 			],
@@ -385,10 +431,10 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "clearCircle",
-							"sid": 536509134072796,
+							"sid": 627899281309073,
 							"parameters": {
 								"object": "memoryClear",
-								"layer": "\"fog\"",
+								"layer": "\"memory\"",
 								"image-point": "0"
 							}
 						},
@@ -447,10 +493,10 @@
 						{
 							"id": "compare-opacity",
 							"objectClass": "memoryClear",
-							"sid": 650473633731166,
+							"sid": 802631864627149,
 							"parameters": {
 								"comparison": 2,
-								"opacity": "100"
+								"opacity": "memoryClearOpacity"
 							}
 						}
 					],
@@ -709,6 +755,136 @@
 				}
 			],
 			"sid": 521654272012787
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "CollectMemories",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Choose 8 buildings to be special"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 204737262134627
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 193656913760448,
+							"parameters": {
+								"variable": "specialBuildingsCounter",
+								"value": "specialBuildings"
+							}
+						}
+					],
+					"sid": 895026930128439,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "while",
+									"objectClass": "System",
+									"sid": 436573994174291
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 791621496234162,
+									"parameters": {
+										"first-value": "specialBuildingsCounter",
+										"comparison": 4,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 536926058420589,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-random-instance",
+											"objectClass": "System",
+											"sid": 768540379674840,
+											"parameters": {
+												"object": "buildings"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "buildings",
+											"sid": 491182733784845,
+											"parameters": {
+												"instance-variable": "special"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "buildings",
+											"sid": 963555700560606,
+											"parameters": {
+												"instance-variable": "special",
+												"value": "true"
+											}
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 985511408584043,
+											"parameters": {
+												"variable": "specialBuildingsCounter",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 786423048959439
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "buildings",
+							"sid": 311752015729055,
+							"parameters": {
+								"instance-variable": "special"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "buildings",
+							"sid": 432000516975651,
+							"parameters": {
+								"animation": "\"Selected\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 710487888504724
+				}
+			],
+			"sid": 882351859350029
 		}
 	],
 	"sid": 164693033357527
