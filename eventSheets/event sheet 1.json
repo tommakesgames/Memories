@@ -13,6 +13,46 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "zoomSpeed",
+			"type": "number",
+			"initialValue": "0.005",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 671117190833319
+		},
+		{
+			"eventType": "variable",
+			"name": "zoomInScale",
+			"type": "number",
+			"initialValue": "0.9",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 883690003193372
+		},
+		{
+			"eventType": "variable",
+			"name": "dropBombInterval",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 375472491180580
+		},
+		{
+			"eventType": "variable",
+			"name": "zoomOutScale",
+			"type": "number",
+			"initialValue": "0.45",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 588736621963131
+		},
+		{
+			"eventType": "variable",
 			"name": "circleGrowRate",
 			"type": "number",
 			"initialValue": "10",
@@ -55,7 +95,7 @@
 			"eventType": "variable",
 			"name": "memoryClearOpacity",
 			"type": "number",
-			"initialValue": "50",
+			"initialValue": "40",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -93,6 +133,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "debugVisible",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 631873920371848
+		},
+		{
+			"eventType": "variable",
 			"name": "memoryClearOpacityRate",
 			"type": "number",
 			"initialValue": "2",
@@ -120,6 +170,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 373422730895566
+		},
+		{
+			"eventType": "variable",
+			"name": "cutsceneActive",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 462048459546722
 		},
 		{
 			"eventType": "group",
@@ -221,9 +281,9 @@
 						{
 							"id": "set-layout-scale",
 							"objectClass": "System",
-							"sid": 154051458431978,
+							"sid": 338358633556113,
 							"parameters": {
-								"scale": "1.0"
+								"scale": "zoomInScale"
 							}
 						}
 					],
@@ -252,6 +312,211 @@
 						}
 					],
 					"sid": 248681850408742
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 610115757908373,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 633519717430373,
+							"parameters": {
+								"variable": "debugVisible"
+							}
+						}
+					],
+					"sid": 783089416024299
+				},
+				{
+					"eventType": "comment",
+					"text": "Debug info"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 910137148742379
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "scaleText",
+							"sid": 600238111322780,
+							"parameters": {
+								"text": "LayoutScale"
+							}
+						}
+					],
+					"sid": 984091431502328
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 322904163436701,
+							"parameters": {
+								"variable": "debugVisible"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "scaleText",
+							"sid": 537874950407180,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "zoomOutFinal",
+							"sid": 940726174764826,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "zoomOutFocus",
+							"sid": 431071858434945,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 850841842946277,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "buildings",
+									"sid": 158621934112498,
+									"parameters": {
+										"instance-variable": "special"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "buildings",
+									"sid": 315070439740230,
+									"parameters": {
+										"animation": "\"Selected\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 302442739102868
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 389868997743319
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "scaleText",
+							"sid": 522962364087714,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "zoomOutFinal",
+							"sid": 284521415410037,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "zoomOutFocus",
+							"sid": 201741178660667,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 427527850924421,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "buildings",
+									"sid": 646897612405748,
+									"parameters": {
+										"instance-variable": "special"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "buildings",
+									"sid": 628215124546655,
+									"parameters": {
+										"animation": "\"Default\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 679085322304298
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 743639811146789,
+							"parameters": {
+								"key": 67
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 195461034384881,
+							"parameters": {
+								"group-name": "\"Cutscene\"",
+								"state": "activated"
+							}
+						}
+					],
+					"sid": 508060661952409
 				}
 			],
 			"sid": 640762880251818
@@ -477,10 +742,6 @@
 			"sid": 379227187891659
 		},
 		{
-			"eventType": "comment",
-			"text": "Memory clear doesn't start at beginning."
-		},
-		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "MemoryCircle",
@@ -664,6 +925,15 @@
 								"comparison": 4,
 								"value": "0"
 							}
+						},
+						{
+							"id": "is-group-active",
+							"objectClass": "System",
+							"sid": 678839046958302,
+							"parameters": {
+								"group-name": "\"Cutscene\""
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [],
@@ -773,21 +1043,21 @@
 						{
 							"id": "on-start-of-layout",
 							"objectClass": "System",
-							"sid": 204737262134627
+							"sid": 865587762681843
 						}
 					],
 					"actions": [
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 193656913760448,
+							"sid": 204728268250089,
 							"parameters": {
 								"variable": "specialBuildingsCounter",
 								"value": "specialBuildings"
 							}
 						}
 					],
-					"sid": 895026930128439,
+					"sid": 779426251071402,
 					"children": [
 						{
 							"eventType": "block",
@@ -795,12 +1065,12 @@
 								{
 									"id": "while",
 									"objectClass": "System",
-									"sid": 436573994174291
+									"sid": 418177526686408
 								},
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 791621496234162,
+									"sid": 848436758567810,
 									"parameters": {
 										"first-value": "specialBuildingsCounter",
 										"comparison": 4,
@@ -809,7 +1079,7 @@
 								}
 							],
 							"actions": [],
-							"sid": 536926058420589,
+							"sid": 427528343629347,
 							"children": [
 								{
 									"eventType": "block",
@@ -817,7 +1087,7 @@
 										{
 											"id": "pick-random-instance",
 											"objectClass": "System",
-											"sid": 768540379674840,
+											"sid": 833397073503071,
 											"parameters": {
 												"object": "buildings"
 											}
@@ -825,7 +1095,7 @@
 										{
 											"id": "is-boolean-instance-variable-set",
 											"objectClass": "buildings",
-											"sid": 491182733784845,
+											"sid": 931342745372396,
 											"parameters": {
 												"instance-variable": "special"
 											},
@@ -836,7 +1106,7 @@
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "buildings",
-											"sid": 963555700560606,
+											"sid": 129512048099047,
 											"parameters": {
 												"instance-variable": "special",
 												"value": "true"
@@ -845,14 +1115,14 @@
 										{
 											"id": "subtract-from-eventvar",
 											"objectClass": "System",
-											"sid": 985511408584043,
+											"sid": 375567919272120,
 											"parameters": {
 												"variable": "specialBuildingsCounter",
 												"value": "1"
 											}
 										}
 									],
-									"sid": 786423048959439
+									"sid": 537087155546301
 								}
 							]
 						}
@@ -862,29 +1132,519 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "clearCircle",
+							"sid": 266484769957447,
+							"parameters": {
+								"object": "buildings",
+								"offset-x": "buildings.Width/2",
+								"offset-y": "buildings.Height/2"
+							}
+						},
+						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "buildings",
-							"sid": 311752015729055,
+							"sid": 688680026980265,
 							"parameters": {
 								"instance-variable": "special"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "buildings",
+							"sid": 360767876004292,
+							"parameters": {
+								"instance-variable": "discovered"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 234132565005319,
+							"parameters": {
+								"audio-file": "Pickup_Coin",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "buildings",
+							"sid": 797097490731272,
+							"parameters": {
+								"instance-variable": "discovered",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "buildings",
+							"sid": 191140007302995,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						}
+					],
+					"sid": 792797652789556
+				}
+			],
+			"sid": 882351859350029
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "player",
+					"sid": 254406982227215,
+					"parameters": {
+						"object": "exit"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 159906454422695,
+					"parameters": {
+						"group-name": "\"Cutscene\"",
+						"state": "activated"
+					}
+				}
+			],
+			"sid": 408368781871799
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Cutscene",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Zoom out and move focus smoothly to centre"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-group-active",
+							"objectClass": "System",
+							"sid": 207800254527533,
+							"parameters": {
+								"group-name": "\"Cutscene\""
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 573180063942727
+						}
+					],
+					"actions": [
+						{
+							"id": "set-ignoring-input",
+							"objectClass": "player",
+							"sid": 218713538222057,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"input": "start-ignoring"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "player",
+							"sid": 385531634815807,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "player",
+							"sid": 801823379431712,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "13",
+								"type": "once",
+								"tag": "\"cutscene\""
+							}
+						}
+					],
+					"sid": 741585592359414
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-fade-out-finished",
+							"objectClass": "player",
+							"sid": 878131007583871,
+							"behaviorType": "Fade"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "player",
+							"sid": 140401137501659,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "zoomOutFocus",
+							"sid": 650869596868768,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "plane",
+							"sid": 329435071910397,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "random(1.5)",
+								"type": "once",
+								"tag": "\"startMoving\""
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "zoomOutFocus",
+							"sid": 926851267295015,
+							"parameters": {
+								"object": "player",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "zoomOutFocus",
+							"sid": 103699324821958,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "angle(player.X, player.Y, zoomOutFinal.X, zoomOutFinal.Y)"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "zoomOutFocus",
+							"sid": 236803446832871,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 633857044729756
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-enabled",
+							"objectClass": "zoomOutFocus",
+							"sid": 487730053099332,
+							"behaviorType": "ScrollTo"
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 809981217867058,
+							"parameters": {
+								"first-value": "LayoutScale",
+								"comparison": 4,
+								"second-value": "zoomOutScale"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-animation",
-							"objectClass": "buildings",
-							"sid": 432000516975651,
+							"id": "set-layout-scale",
+							"objectClass": "System",
+							"sid": 292409597909843,
 							"parameters": {
-								"animation": "\"Selected\"",
-								"from": "beginning"
+								"scale": "LayoutScale-zoomSpeed"
+							}
+						},
+						{
+							"id": "set-layout-effect-enabled",
+							"objectClass": "System",
+							"sid": 622550686597982,
+							"parameters": {
+								"mode": "disable",
+								"effect": "\"Noise\""
+							}
+						},
+						{
+							"id": "set-layout-effect-enabled",
+							"objectClass": "System",
+							"sid": 532347455623583,
+							"parameters": {
+								"mode": "disable",
+								"effect": "\"Vignette\""
 							}
 						}
 					],
-					"sid": 710487888504724
+					"sid": 492329122383668
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-values",
+							"objectClass": "System",
+							"sid": 310413027053560,
+							"parameters": {
+								"value": "zoomOutFocus.X",
+								"lower-bound": "zoomOutFinal.X-10",
+								"upper-bound": "zoomOutFinal.X+10"
+							}
+						},
+						{
+							"id": "is-between-values",
+							"objectClass": "System",
+							"sid": 566762567684446,
+							"parameters": {
+								"value": "zoomOutFocus.Y",
+								"lower-bound": "zoomOutFinal.Y-10",
+								"upper-bound": "zoomOutFinal.Y+10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "zoomOutFocus",
+							"sid": 860954079302172,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 588520371695899
+				},
+				{
+					"eventType": "comment",
+					"text": "Planes and bombs"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "plane",
+							"sid": 143835679151404,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"startMoving\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-speed",
+							"objectClass": "plane",
+							"sid": 689144832961347,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "random(250, 700)"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "plane",
+							"sid": 108921674840287,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "plane",
+							"sid": 546756264974744,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "random(dropBombInterval)",
+								"type": "once",
+								"tag": "\"dropBomb\""
+							}
+						}
+					],
+					"sid": 664783828807379
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "plane",
+							"sid": 810046917234131,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"dropBomb\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "plane",
+							"sid": 474952717647021,
+							"parameters": {
+								"object": "bomb",
+								"layer": "4",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "bomb",
+							"sid": 759717523287600,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "random(360)"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "bomb",
+							"sid": 313455976403451,
+							"parameters": {
+								"frame-number": "random(bomb.AnimationFrameCount)"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "bomb",
+							"sid": 912575127109380,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "random(1,3)",
+								"type": "once",
+								"tag": "\"detonate\""
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "plane",
+							"sid": 767212072564791,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "random(dropBombInterval)",
+								"type": "once",
+								"tag": "\"dropBomb\""
+							}
+						}
+					],
+					"sid": 626759200614569
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "bomb",
+							"sid": 366929518821959,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"detonate\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "bomb",
+							"sid": 739014075481189,
+							"parameters": {
+								"object": "detonation",
+								"layer": "4",
+								"image-point": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "bomb",
+							"sid": 606862650508545
+						},
+						{
+							"id": "shake",
+							"objectClass": "zoomOutFocus",
+							"sid": 811165892527643,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"magnitude": "20",
+								"duration": "0.4",
+								"mode": "reducing-magnitude"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 923091103519940,
+							"parameters": {
+								"audio-file": "Explosion23",
+								"loop": "not-looping",
+								"volume": "-5",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 786781756094736
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "detonation",
+							"sid": 169976479650930,
+							"parameters": {
+								"animation": "\"Animation 1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "detonation",
+							"sid": 148552757638423
+						}
+					],
+					"sid": 730244807188137,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "player",
+							"sid": 683303688677367,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"cutscene\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 943838660505135
 				}
 			],
-			"sid": 882351859350029
+			"sid": 900800675378024
 		}
 	],
 	"sid": 164693033357527

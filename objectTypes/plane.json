@@ -1,0 +1,67 @@
+{
+	"name": "plane",
+	"plugin-id": "Sprite",
+	"sid": 446604632052479,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 350463644462753
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 469674165827268
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 800,
+						"height": 800,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\bombs\\bomber.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9,
+						"collisionPoly": {
+							"points": [
+								0.64125,
+								0.64125,
+								0.5,
+								0.8125,
+								0.3175,
+								0.6837500000000001,
+								0.26125,
+								0.5,
+								0.33125000000000004,
+								0.33125000000000004,
+								0.5,
+								0.19874999999999998,
+								0.635,
+								0.36624999999999996,
+								0.745,
+								0.5
+							]
+						},
+						"duration": 1
+					}
+				],
+				"sid": 690101325365784,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,102 @@
+{
+	"name": "detonation",
+	"plugin-id": "Sprite",
+	"sid": 873740434661273,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 17,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\bombs\\explosion1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 18,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\bombs\\explosion2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 19,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\bombs\\explosion3.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 20,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\bombs\\explosion4.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 21,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\bombs\\explosion5.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 22,
+						"duration": 1
+					},
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tom\\Documents\\GitHub\\Memories\\images\\bombs\\explosion6.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 23,
+						"duration": 1
+					}
+				],
+				"sid": 936054341100656,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 10
+			}
+		],
+		"subfolders": []
+	}
+}
